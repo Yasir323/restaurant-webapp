@@ -1,0 +1,77 @@
+.nav-links > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+  z-index: 10001;
+}
+
+.nav-links.visible > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    background-color: #495e57;
+    transition: all 0.3s ease-in-out;
+}
+
+ul > li {
+    margin-right: 5vw;
+}
+
+li > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul li a:hover{
+  text-decoration: underline solid #495E57; 
+}
+
+.hamburger-menu-icon > button {
+    background: none; 
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none; /* Remove the outline on focus (optional) */
+}
+
+.hamburger-menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger-menu-icon {
+        display: block;
+    }
+
+    .nav-links.visible {
+        display: flex;
+        background: #333333;
+        z-index: 1000;
+    }
+
+    .navbar {
+        background:#fff;
+        padding: 10px 8%;
+    }
+
+    nav ul li a{
+        color: #fff;
+    }
+
+    nav ul li {
+        padding: 2vh 0;
+    }
+}
